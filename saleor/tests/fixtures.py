@@ -1454,9 +1454,7 @@ def variant_with_reserved_stock(
     variant, warehouses_with_shipping_zone, shipping_zone, customer_user
 ):
     warehouses = warehouses_with_shipping_zone
-    Stock.objects.create(
-        warehouse=warehouses[0], product_variant=variant, quantity=4
-    )
+    Stock.objects.create(warehouse=warehouses[0], product_variant=variant, quantity=4)
     Reservation.objects.create(
         user=customer_user,
         shipping_zone=shipping_zone,
@@ -1472,9 +1470,7 @@ def variant_with_expired_stock_reservation(
     variant, warehouses_with_shipping_zone, shipping_zone, customer_user
 ):
     warehouses = warehouses_with_shipping_zone
-    Stock.objects.create(
-        warehouse=warehouses[0], product_variant=variant, quantity=4
-    )
+    Stock.objects.create(warehouse=warehouses[0], product_variant=variant, quantity=4)
     Reservation.objects.create(
         user=customer_user,
         shipping_zone=shipping_zone,
