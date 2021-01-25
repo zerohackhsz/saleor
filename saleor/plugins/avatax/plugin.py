@@ -163,7 +163,6 @@ class AvataxPlugin(BasePlugin):
     ) -> TaxedMoney:
         if self._skip_plugin(previous_value):
             return previous_value
-
         checkout_total = previous_value
 
         if not _validate_checkout(checkout, [line_info.line for line_info in lines]):
